@@ -1,0 +1,12 @@
+CUDA_VISIBLE_DEVICES=0 python main.py \
+  --data_dir ./data \
+  --drug_ids  ./data/drug_ids.csv \
+  --disease_ids ./data/disease_ids.csv \
+  --d_hidden 512 --d_emb 512 \
+  --n_layers 2 \
+  --phase1_epochs 100 \
+  --phase2_epochs 100 \
+  --phase3_epochs 1000 \
+  --batch_size 64 --neg_ratio 5 \
+  --stage1_k 500 --top_k 100 \
+  --patience 1000
